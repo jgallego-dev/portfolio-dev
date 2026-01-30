@@ -1,0 +1,281 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+
+const projects = [
+  {
+    id: '01',
+    title: 'Legacy Migration & Rust Systems',
+    category: 'ENTERPRISE',
+    description:
+      'Maintained and supported legacy TypeScript software while guiding clients through smooth migrations to new platforms. Designed custom plugins tailored to client-specific workflows and contributed to migration of core systems to Rust, improving performance and reducing operational costs.',
+    stack: ['TYPESCRIPT', 'RUST', 'MIGRATION', 'CUSTOM_PLUGINS'],
+    company: 'SoftServe',
+    period: '2024 - Present'
+  },
+  {
+    id: '02',
+    title: 'Enterprise Payroll Platform',
+    category: 'FINTECH',
+    description:
+      'Built payroll application with Python microservices and distributed background workers for async task processing. Integrated third-party APIs for tax calculations and secure bank connections, enabling nationwide expansion. Migrated platform to scalable architecture.',
+    stack: ['PYTHON', 'MICROSERVICES', 'BANKING_API', 'AWS'],
+    company: 'Hourly',
+    period: '2022 - 2023'
+  },
+  {
+    id: '03',
+    title: 'POS & Delivery Platform',
+    category: 'E-COMMERCE',
+    description:
+      'Developed point of sale and delivery platform with TypeScript microservices. Implemented feature flagging for controlled releases, enhancing product stability. Rebuilt core business apps in Go, reducing response times and operational costs.',
+    stack: ['TYPESCRIPT', 'GOLANG', 'MICROSERVICES', 'FEATURE_FLAGS'],
+    company: 'Gorilla Logic',
+    period: '2020 - 2022'
+  },
+];
+
+const techStack = [
+  'TypeScript',
+  'Node.js',
+  'Rust',
+  'GoLang',
+  'Python',
+  'PostgreSQL',
+  'MongoDB',
+  'Docker',
+  'Kubernetes',
+  'AWS',
+  'GraphQL',
+  'Microservices'
+];
+---
+
+<Layout title="Jaime Gallego - Senior Software Engineer">
+  <main class="w-full bg-white min-h-screen selection:bg-electric-red selection:text-white">
+    <div class="max-w-[1920px] mx-auto border-x-4 border-black shadow-[0_0_50px_rgba(0,0,0,0.1)]">
+
+      <!-- Hero Section -->
+      <section class="min-h-screen relative flex flex-col justify-between p-4 md:p-12 border-b-4 border-black overflow-hidden">
+        <!-- Background Grid Lines -->
+        <div class="absolute inset-0 grid grid-cols-4 pointer-events-none opacity-10">
+          <div class="border-r border-black h-full"></div>
+          <div class="border-r border-black h-full"></div>
+          <div class="border-r border-black h-full"></div>
+          <div class="border-r border-black h-full"></div>
+        </div>
+
+        <div class="relative z-10 flex justify-between items-start">
+          <span class="font-mono text-xs md:text-sm text-electric-red tracking-widest uppercase">
+            &lt;hero_section&gt;
+          </span>
+          <div class="font-mono text-right text-sm md:text-base">
+            <p>LOC: MEDELLÍN, COLOMBIA</p>
+            <p>
+              STATUS: <span class="bg-electric-red text-white px-1">AVAILABLE</span>
+            </p>
+            <p class="mt-2 text-xs opacity-50">v.2026.1.0</p>
+          </div>
+        </div>
+
+        <div class="relative z-10 mt-20 md:mt-0">
+          <h1 class="text-[15vw] leading-[0.8] font-black tracking-tighter uppercase mix-blend-difference text-black select-none">
+            JAIME
+            <br />
+            <span class="text-transparent text-stroke-black hover:text-electric-red transition-colors duration-0 cursor-default">
+              GALLEGO
+            </span>
+          </h1>
+
+          <div class="md:absolute md:bottom-32 md:right-12 max-w-xl bg-white border-4 border-black p-6 shadow-hard mt-8 md:mt-0 transform md:-rotate-1 hover:rotate-0 transition-transform duration-0">
+            <p class="font-mono text-lg md:text-xl leading-relaxed">
+              <span class="text-electric-red font-bold">&gt;</span> SENIOR_SOFTWARE_ENGINEER
+              <br />
+              <span class="text-electric-red font-bold">&gt;</span> DISTRIBUTED_SYSTEMS_SPECIALIST
+              <br />
+              <span class="text-electric-red font-bold">&gt;</span> FINTECH_&_SCALABLE_APPLICATIONS
+            </p>
+          </div>
+        </div>
+
+        <div class="relative z-10 mt-12 md:mt-0">
+          <span class="font-mono text-xs md:text-sm text-electric-red tracking-widest uppercase">
+            &lt;/hero_section&gt;
+          </span>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section class="p-4 md:p-12 border-b-4 border-black bg-off-white">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+          <div class="md:col-span-4 flex flex-col justify-between">
+            <span class="font-mono text-xs md:text-sm text-electric-red tracking-widest uppercase">
+              &lt;about_me&gt;
+            </span>
+            <div class="mt-12 border-4 border-black p-8 bg-electric-red text-white shadow-hard">
+              <span class="block text-9xl font-black leading-none">07</span>
+              <span class="font-mono text-xl block mt-2">YEARS_EXP</span>
+            </div>
+          </div>
+
+          <div class="md:col-span-8 relative">
+            <p class="text-4xl md:text-6xl font-black uppercase leading-tight">
+              I build systems that <span class="bg-black text-white px-2">don't break</span> under pressure.
+            </p>
+            <p class="mt-8 text-xl md:text-2xl font-mono border-l-4 border-electric-red pl-6 leading-relaxed max-w-3xl">
+              Obsessed with performance, clean architecture, and removing the unnecessary.
+              Currently at SoftServe. Previously built core systems at Hourly,
+              Gorilla Logic, and Condor Labs. I don't do "good enough".
+            </p>
+
+            <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4">
+              {techStack.map((tech) => (
+                <div class="border-2 border-black p-2 text-center font-mono font-bold hover:bg-black hover:text-white cursor-crosshair transition-colors duration-0">
+                  {tech.toUpperCase()}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section class="p-4 md:p-12 border-b-4 border-black">
+        <div class="flex items-baseline gap-4 mb-12 border-b-4 border-black pb-4">
+          <span class="font-mono text-electric-red text-xl font-bold">[02]</span>
+          <h2 class="text-5xl md:text-7xl font-black tracking-tighter uppercase">
+            Selected_Works
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 gap-12">
+          {projects.map((project) => (
+            <div class="group border-4 border-black bg-white p-6 md:p-10 relative hover:bg-black hover:text-white transition-colors duration-0">
+              <div class="absolute top-4 right-4 font-mono text-xs border border-black px-2 py-1 rounded-none group-hover:border-white group-hover:text-white">
+                {project.category}
+              </div>
+
+              <div class="mb-8">
+                <span class="font-black text-6xl md:text-8xl text-transparent text-stroke-black group-hover:text-stroke-white opacity-50 group-hover:opacity-100 transition-all duration-0">
+                  {project.id}
+                </span>
+                <h3 class="text-4xl md:text-5xl font-black uppercase mt-[-20px] md:mt-[-40px] relative z-10 group-hover:text-electric-red">
+                  {project.title}
+                </h3>
+                {project.company && (
+                  <div class="flex items-center gap-3 mt-2 font-mono text-sm">
+                    <span class="font-bold">{project.company}</span>
+                    <span class="opacity-50">|</span>
+                    <span class="opacity-75">{project.period}</span>
+                  </div>
+                )}
+              </div>
+
+              <p class="font-mono text-lg mb-8 max-w-2xl border-l-2 border-electric-red pl-4 group-hover:border-white">
+                {project.description}
+              </p>
+
+              <div class="flex flex-wrap gap-2 mb-8">
+                {project.stack.map((tech) => (
+                  <span class="text-xs font-mono border border-black px-2 py-1 group-hover:border-white group-hover:text-white">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div class="mt-12 text-right">
+          <a
+            href="https://linkedin.com/in/jaimegallegor"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="font-mono text-xl underline decoration-4 decoration-electric-red hover:bg-black hover:text-white p-2 transition-colors duration-0"
+          >
+            VIEW_MORE_ON_LINKEDIN_&gt;
+          </a>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section class="p-4 md:p-12 min-h-[80vh] flex flex-col justify-between bg-black text-white">
+        <div>
+          <span class="font-mono text-xs md:text-sm text-electric-red tracking-widest uppercase">
+            &lt;contact_signal&gt;
+          </span>
+          <h2 class="text-[12vw] leading-none font-black uppercase mt-8 tracking-tighter">
+            Let's
+            <br />
+            <span class="text-electric-red">Build</span>
+            <br />
+            Something.
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-20">
+          <div class="border-t-4 border-white pt-8">
+            <p class="font-mono text-sm text-gray-400 mb-4">EMAIL_PROTOCOL</p>
+            <a
+              href="mailto:jgallego.dev@gmail.com"
+              class="text-2xl md:text-4xl font-bold hover:text-electric-red transition-colors duration-0 block break-all"
+            >
+              JGALLEGO.DEV@GMAIL.COM
+            </a>
+          </div>
+
+          <div class="border-t-4 border-white pt-8">
+            <p class="font-mono text-sm text-gray-400 mb-4">SOCIAL_UPLINK</p>
+            <div class="flex flex-col gap-4">
+              <a
+                href="https://github.com/jaimegallegor"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center gap-4 text-2xl font-bold hover:text-electric-red transition-colors duration-0 group"
+              >
+                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+                <span>GITHUB</span>
+                <span class="opacity-0 group-hover:opacity-100 font-mono text-sm text-electric-red">
+                  &lt;- CHECK_CODE
+                </span>
+              </a>
+              <a
+                href="https://linkedin.com/in/jaimegallegor"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center gap-4 text-2xl font-bold hover:text-electric-red transition-colors duration-0 group"
+              >
+                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+                <span>LINKEDIN</span>
+                <span class="opacity-0 group-hover:opacity-100 font-mono text-sm text-electric-red">
+                  &lt;- CONNECT
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-20 flex justify-between items-end font-mono text-xs text-gray-500">
+          <div>
+            <p>&copy; 2026 JAIME GALLEGO</p>
+            <p>BUILT WITH ASTRO + TAILWIND</p>
+          </div>
+          <div class="text-right">
+            <p>MEDELLÍN, COLOMBIA</p>
+            <p>SYS_STATUS: ONLINE</p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Floating Status Indicator -->
+    <div class="fixed bottom-8 right-8 z-50 mix-blend-difference hidden md:block">
+      <div class="animate-pulse bg-white w-4 h-4 rounded-none"></div>
+    </div>
+  </main>
+</Layout>
