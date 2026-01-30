@@ -1,6 +1,6 @@
 # Portafolio de Jaime Gallego
 
-Portafolio profesional construido con Astro, Tailwind CSS y ejecutado con Bun.
+Portafolio profesional construido con Astro, Tailwind CSS y ejecutado con Bun usando Claude Code.
 
 ## 🚀 Tecnologías
 
