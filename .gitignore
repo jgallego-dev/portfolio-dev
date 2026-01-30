@@ -27,3 +27,5 @@ bun.lockb
 # Claude AI files
 .claude/
 
+# Local development files
+*.pdf
